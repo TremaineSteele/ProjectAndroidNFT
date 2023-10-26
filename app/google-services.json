@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "143762524722",
+    "project_id": "projectandroidnft",
+    "storage_bucket": "projectandroidnft.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143762524722:android:04d8f3103eb577a6710a2b",
+        "android_client_info": {
+          "package_name": "com.example.projectandroidnft"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgj8cJ2E1W-TzCmlin1naoZjw8OCzjtGc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="CONTACT US"
+        android:textSize="40dp" />
+
+    <EditText
+        android:id="@+id/edtFn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="FIRST NAME:" />
+
+    <EditText
+        android:id="@+id/edtLn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="LAST NAME:"
+        />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="EMAIL:"
+        />
+
+    <EditText
+        android:id="@+id/edtMess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="MESSAGE:"
+        />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_margin="15dp"
+        android:text="SUBMIT"
+        />
+
+    <EditText
+        android:id="@+id/edtDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center"
+        />
+
+
+
+
+</LinearLayout>
