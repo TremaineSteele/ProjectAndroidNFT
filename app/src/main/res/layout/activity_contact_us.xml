@@ -52,6 +52,12 @@
         android:layout_margin="15dp"
         android:text="SUBMIT"
         />
+    <Button
+        android:id="@+id/goback5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        />
 
     <EditText
         android:id="@+id/edtDisplay"
@@ -60,6 +66,7 @@
         android:background="@null"
         android:gravity="center"
         />
+
 
 
 

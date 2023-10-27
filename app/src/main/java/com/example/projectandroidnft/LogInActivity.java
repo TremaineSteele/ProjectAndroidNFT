@@ -49,6 +49,7 @@ public class LogInActivity extends AppCompatActivity {
         logBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 checkUser();
 
 
@@ -94,10 +95,9 @@ public class LogInActivity extends AppCompatActivity {
                         intent.putExtra("name",firstnameDB);
                         intent.putExtra("name",lastnameDB);
                         intent.putExtra("email",emailDB);
-                        intent.putExtra("username",usernameFromDB);
+                        //intent.putExtra("username",usernameFromDB);
                         intent.putExtra("password",passDB);
                         intent.putExtra("confirm",confirmpassDB);
-
                         intent.putExtra("username",userName);
 
 

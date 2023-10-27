@@ -76,7 +76,11 @@ public class SignUpActivity extends AppCompatActivity {
                     //setting primary key as username
                     reference.child(userUsername).setValue(model);
                     Toast.makeText(SignUpActivity.this, "Successful", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                    Intent intent = new Intent(SignUpActivity.this, UserMainPage.class);
+                    intent.putExtra("username",userUsername);
+                    intent.putExtra("name",firstnameUser);
+                    intent.putExtra("email",emailUser);
+
                     startActivity(intent);
                     finish();
 

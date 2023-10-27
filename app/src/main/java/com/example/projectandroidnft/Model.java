@@ -16,6 +16,10 @@ public class Model {
         this.confirmPass = confirmPass;
     }
 
+    public Model(){
+
+    }
+
 
     public String getFirstName() {
         return firstName;

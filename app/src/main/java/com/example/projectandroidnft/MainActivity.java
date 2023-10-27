@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     TextView expdate;
 
     Button confirmPurchase,datepickerBtn,goBack2;
+    String username;
+
 
 
 
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        username = getIntent().getStringExtra("username");
 
         Intent intent = getIntent();
         if (intent.hasExtra("bitmap")) {
@@ -56,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent i = new Intent(MainActivity.this, UserMainPage.class);
+                    i.putExtra("username",username);
                     startActivity(i);
                     finish();
                 }
@@ -80,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
                     Toast.makeText(MainActivity.this, "Purchase Successful", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(MainActivity.this, UserMainPage.class);
+                   i.putExtra("username",username);
                     startActivity(i);
                     finish();
 

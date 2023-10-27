@@ -18,11 +18,13 @@ public class PurchasePageActivity extends AppCompatActivity {
     Button   bt1,bt2,bt3,bt4,bt5,bt6,goBackBtn;
 
     ImageView im1,im2,im3,im4,im5,im6;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_purchase_page);
+        username = getIntent().getStringExtra("username");
 
         //all checkboxes linked
         ch1 = findViewById(R.id.nft1);
@@ -57,7 +59,7 @@ public class PurchasePageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PurchasePageActivity.this,UserMainPage.class);
-                
+                intent.putExtra("username",username);
                 startActivity(intent);
                 finish();
                 }

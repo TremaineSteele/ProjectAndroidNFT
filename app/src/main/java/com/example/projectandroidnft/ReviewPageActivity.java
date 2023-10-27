@@ -21,6 +21,7 @@ public class ReviewPageActivity extends AppCompatActivity {
 
     DatabaseReference databaseReference;
     FirebaseDatabase database;
+    String username;
 
 
     @Override
@@ -28,6 +29,7 @@ public class ReviewPageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review_page);
 
+        username = getIntent().getStringExtra("username");
 
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference("ratings");
@@ -44,7 +46,9 @@ public class ReviewPageActivity extends AppCompatActivity {
         goback4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(ReviewPageActivity.this,UserMainPage.class);
+
+                Intent i = new Intent(ReviewPageActivity.this, UserMainPage.class);
+                i.putExtra("username",username);
                 startActivity(i);
                 finish();
             }
@@ -131,7 +135,9 @@ public class ReviewPageActivity extends AppCompatActivity {
                 }
 
 
+
                 Intent i = new Intent(ReviewPageActivity.this, UserMainPage.class);
+                i.putExtra("username",username);
                 startActivity(i);
                 finish();
 

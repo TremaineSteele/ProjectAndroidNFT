@@ -15,15 +15,17 @@ import com.google.firebase.database.FirebaseDatabase;
 public class ContactUsActivity extends AppCompatActivity {
 
     EditText ed1, ed2, ed3, ed4, ed5;
-    Button btn1;
+    Button btn1,goback5;
 
     FirebaseDatabase database;
     DatabaseReference reference;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
+        username = getIntent().getStringExtra("username");
 
         ed1 = findViewById(R.id.edtFn);
         ed2 = findViewById(R.id.edtLn);
@@ -31,6 +33,20 @@ public class ContactUsActivity extends AppCompatActivity {
         ed4 = findViewById(R.id.edtMess);
         ed5 = findViewById(R.id.edtDisplay);
         btn1 = findViewById(R.id.btnSubmit);
+        goback5 = findViewById(R.id.goback5);
+
+
+        goback5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ContactUsActivity.this,UserMainPage.class);
+                i.putExtra("username",username);
+                startActivity(i);
+                finish();
+
+
+            }
+        });
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,8 +68,11 @@ public class ContactUsActivity extends AppCompatActivity {
                     ContactUsModel model = new ContactUsModel(fnstr,lnstr,emstr,messtr);
                     reference.child(fnstr).setValue(model);
                     Toast.makeText(ContactUsActivity.this, "Message sent", Toast.LENGTH_SHORT).show();
+
                     Intent intent = new Intent(ContactUsActivity.this,UserMainPage.class);
+                    intent.putExtra("username",username);
                     startActivity(intent);
+                    finish();
 
 
                 }
